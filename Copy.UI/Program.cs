@@ -1,7 +1,7 @@
 ﻿using System;
+using CopyDirectory;
 
-
-namespace CopyDirectory
+namespace Copy.UI
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace CopyDirectory
             var newPath = @"C:\temp\newfolder1";
 
             //6. Users must be able to pick or specify a source and target directory.
-            Console.WriteLine("Please specify source to copy: " );
+            Console.WriteLine("Please specify source to copy: ");
             var userSource = Console.ReadLine().Trim();
             Console.WriteLine("Please specify target to copy: ");
             var userTarget = Console.ReadLine().Trim();
@@ -21,11 +21,10 @@ namespace CopyDirectory
             {
                 hc.CopyFolder(path, newPath, true);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-            
         }
     }
 }

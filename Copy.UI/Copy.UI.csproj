@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DAE4335B-251A-42E9-A7BE-BBFA6A840142}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>CopyDirectory</RootNamespace>
-    <AssemblyName>CopyDirectory</AssemblyName>
+    <ProjectGuid>{A19A2A98-08DC-41EB-B526-64EBA5597A7F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Copy.UI</RootNamespace>
+    <AssemblyName>Copy.UI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>Copy.UI.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HandleCopy.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CopyDirectory\CopyDirectory.csproj">
+      <Project>{dae4335b-251a-42e9-a7be-bbfa6a840142}</Project>
+      <Name>CopyDirectory</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
